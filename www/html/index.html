@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transcendence</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="./assets/text_anim.js"></script>
+    <script src="../assets/text_anim.js"></script>
 </head>
 <body>
     <h1>TRANSCENDENCE</h1>
     <p>Welcome to our world</p>
-    <a href="https://github.com/monsieurCanard/Inception" target="_blank">Github</a>
+    <a href="https://github.com/monsieurCanard/Transcendence" target="_blank">Github</a>
     <svg class="distort">
         <filter id="distortionFilter">
             <feTurbulence type="fractalNoise" baseFrequency="2.01 .01" numOctaves="5" seed="2" stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%" result="noise"></feTurbulence>
@@ -20,23 +20,6 @@
     </svg>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <script>
-    VANTA.NET({
-    el: "body",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xcda061,
-    backgroundColor: 0xdca9cd,
-    points: 20.00,
-    maxDistance: 19.00,
-    spacing: 20.00,
-    showDots: false
-    })
-    </script>
+    <script src="../assets/vanta.js"></script>
 </body>
 </html>
