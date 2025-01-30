@@ -1,6 +1,6 @@
-@function grid($grid-size) {
+/* @function grid($grid-size) {
 @return calc(100vw / 24 * #{$grid-size});
-}
+} */
 
 @font-face {
 	font-family: "Anybody";
@@ -19,7 +19,7 @@
 
 h1 {
 	padding: 4rem;
-	filter: url(#distortionFilter);
+	align-items: center;
 	font-size: 10rem;
 	color: #0e0e0e;
 	font-variation-settings: "wght" 700;
@@ -28,13 +28,8 @@ h1 {
 	}
 }
 
-svg {
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: -9999px;
-	pointer-events: none;
-}
+
+
 
 body {
 	height: 100vh;
@@ -43,17 +38,74 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: #f0f0f0;
+	overflow: hidden;
 }
 
-a {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 2rem;
-	color: #0e0e0e;
-	text-decoration: none;
-	&:last-of-type {
-		right: 0;
-		left: unset;
-	}
+p {
+    font-size: 2rem;
+    color: #0e0e0e;
+    margin: 1rem 0; /* Ajoutez une marge pour espacer les éléments */
+}
+
+button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    color: #0e0e0e;
+    background-color: #f0f0f0;
+    border: 1px solid #0e0e0e;
+    cursor: pointer;
+}
+
+/* nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 10vh;
+	background-color: #0e0e0e;
+} */
+
+#app {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vh; /* Assurez-vous que la div prend toute la hauteur de la fenêtre */
+	text-align: center; /* Centrer le texte à l'intérieur de la div */
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Assurez-vous que la div prend toute la largeur de la fenêtre */
+}
+
+#homePage, #loginPage, #gamePage {
+    width: 100%; /* Assurez-vous que les pages prennent toute la largeur de la fenêtre */
+    padding: 20px; /* Ajoutez du padding pour créer du contenu supplémentaire */
+	margin-top: 40px;
+}
+
+.container {
+    margin-bottom: 50px; /* Ajoutez de la marge pour créer du contenu supplémentaire */
+}
+
+
+
+canvas#pong.gameCanvas {
+	background-color: #000000;
+	border: 1px solid #0e0e0e;
+	height: 50%;
+	width: 100%;
+}
+
+canvas.moduleCanvas {
+    width: 100%;
+    height: 50%;
+    border: 1px solid #0e0e0e;
+    /* margin-top: 20px; */
 }
