@@ -11,8 +11,7 @@
     <div id="app">
         <div id="homePage">
             <div class="container text-center">
-                <!-- <script src="background.js"></script> -->
-                <h1 class="display-3">TRANSCENDENCE</h1>
+                <img src="logo.png" alt="logo" class="img-fluid">
                 <p>Welcome to our world</p>
                 <button id="enterButton" class="btn btn-success">Entrer</button>
             </div>
@@ -20,7 +19,7 @@
 
     <div id="loginPage" style="display: none;">
         <div class="container mt-5">
-            <h1>Formulaire de Connexion</h1>
+            <h1 class="display-1">Login</h1>
             <form>
                 <div class="mb-3">
                     <label for="username" class="form-label">Nom d'utilisateur :</label>
@@ -36,28 +35,22 @@
     </div>
 
         <div id="gamePage" style="display: none;">
-            <nav class="navbar navbar-light bg-light fixed-top">
-                <a class="navbar-brand" href="/www/html/index.html">Transcendence</a>
-                <a class="nav-link" href="#" id="profileButton">Profil</a>
-                <a class="nav-link" href="#" id="logoutButton">Se déconnecter</a>
-            </nav>
-            <!-- <div class="container mt-2"> -->
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-8" id="gameBoard">
-                            <h1 class="display-3">GameBoard</h1>
-                            <canvas id="pong" class="gameCanvas" width="800" height="400"></canvas>
-                            <script src="pong.js"></script>
-                        </div>
-                        <div class="col-md-4">
-                            <h1 class="display-3">Chat</h1>
-                            <canvas id="chatCanvas" class="moduleCanvas" width="400" height="400"></canvas>
-                            <p class="display-3">Infos</p>
-                            <canvas id="infoCanvas" class="moduleCanvas" width="400" height="200"></canvas>
-                        </div>
+            <img src="logo.png" alt="logo" class="img-fluid">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8" id="gameBoard">
+                        <!-- <h3 class="display-3">GameBoard</h3> -->
+                        <canvas id="pong" class="gameCanvas" width="800" height="400"></canvas>
+                        <script src="pong.js"></script>
                     </div>
+                    <div class="col-md-4">
+                        <!-- <h3 class="display-3">Chat</h3> -->
+                        <canvas id="chatCanvas" class="moduleCanvas" width="400" height="400"></canvas>
+                        <!-- <p class="display-3">Infos</p>
+                        <canvas id="infoCanvas" class="moduleCanvas" width="400" height="200"></canvas> -->
+                     </div>
                 </div>
-            <!-- </div>s -->
+            </div>
         </div>
     
     <main id="app"></main>

@@ -3,8 +3,8 @@ const ctx = canvas.getContext("2d");
 
 // Variables pour la raquette et la balle
 let paddleWidth = 10, paddleHeight = 100, ballRadius = 10;
-let player = { x: 0, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, color: "#FF0000", dy: 0 };
-let ai = { x: canvas.width - paddleWidth, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, color: "#00FF00", dy: 0 };
+let player = { x: 0, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, color: "#E6E4CE", dy: 0 };
+let ai = { x: canvas.width - paddleWidth, y: canvas.height / 2 - paddleHeight / 2, width: paddleWidth, height: paddleHeight, color: "#5863F8", dy: 0 };
 let ball = { x: canvas.width / 2, y: canvas.height / 2, dx: 5, dy: 5, radius: ballRadius, color: "#FFFFFF" };
 
 // Fonction pour dessiner les éléments du jeu
@@ -67,7 +67,7 @@ function moveAI() {
     }
 }
 
-// Fonction de gestion des événements de clavier
+// gestion des événements de clavier
 document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowUp") player.dy = -5;
     if (event.key === "ArrowDown") player.dy = 5;
