@@ -1,0 +1,10 @@
+services:
+
+  nginx:
+    container_name: nginx-front-end
+    build: ./nginx
+    ports:
+      - "443:443"
+    volumes:
+      - ./website:/usr/share/nginx/html
+    restart: unless-stopped

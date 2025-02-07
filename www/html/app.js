@@ -1,6 +1,6 @@
   // Définir les différentes "routes" de contenu
 const routes = {
-	"/www/html/index.html": "Home",
+	"/": "Home",
 	"/login": "login",
 	"/game": "game",
   };

@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/*
+* ALL
+*/
+
+* {
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/background-no-border-crop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 
+* CONTAINER
+*/
+
+.hidden {
+  display: none;
+}
+
+.container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+
+
+/*
+* FORM
+*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+/*
+* BOUTONS
+*/
+
+.btn {
+  width: 100%;
+  margin: 5px;
+  color: #ffffff;
+}
+
+.btn-default {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn-link {
+  font-size: 4.5rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-top: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/*
+* TEXTES
+*/
+
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 1.5rem 0; /* Ajoutez une marge pour espacer les éléments */
+}
+
+.display-1 {
+  text-align: center;
+}
+p {
+  font-size: 1rem;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  margin: 1.5rem 0; /* Ajoutez une marge pour espacer les éléments */
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px;
+}
+
+/*
+* LABELS
+*/
+
+label {
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 1rem 0;
+}
+
+input {
+  width: 50%;
+  color: #0e0e0e;
+  background-color: #f0f0f0;
+  border: 1px solid #081400;
+}
+
+/*
+* SELECT
+*/
+
+select {
+  margin: 1rem 0;
+  width: 100%;
+  color: #0e0e0e;
+  background-color: #f0f0f0;
+  border: 1px solid #081400;
+}
+
+/* Ajoutez ce style pour aligner la case à cocher à droite du texte */
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+.checkbox label {
+  flex-grow: 1;
+}
+
+.checkbox input[type="checkbox"] {
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.row {
+  /* display: flex; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  border: 1px solid #081400;
+  border-radius: 5%;
+}
+
+span {
+  color:#ffffff;
+}
+
+img {
+  /* border: 1px solid #081400; */
+  border-radius: 5%;
+}
