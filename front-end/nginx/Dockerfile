@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y nginx openssl
 
 COPY conf/nginx.conf /etc/nginx/sites-enabled/default
 
-COPY tools/nginx_certif.sh /usr/local/bin/nginx_certif.sh
+COPY script/nginx_certif.sh /usr/local/bin/nginx_certif.sh
 
 RUN chmod +x /usr/local/bin/nginx_certif.sh
 

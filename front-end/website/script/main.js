@@ -2,11 +2,12 @@ import { changeLanguage, initializeTranslation, restoreSaveLanguage } from './lo
 import { renderHome } from './pages/home.js';
 import { renderLogin } from './pages/login.js';
 import { renderRegister } from './pages/register.js';
-import { renderGameBoard } from './pages/gameboard.js';
-import { addEventListeners } from './pages/event.js';
+import { renderGameBoard } from './pages/gameboard/gameboard.js';
+import { addEventListeners } from './events/handler.js';
 
 
 const container = document.getElementById('app');
+
 let translate = {};
 
 function loadPage(page)
@@ -27,11 +28,10 @@ function loadPage(page)
 		default:
 			container.innerHTML = renderHome();
 	}
+	
 	localStorage.setItem('current_page', page);
 	addEventListeners();
-
-	const lang = localStorage.getItem('lang') || sessionStorage.getItem('lang') || 'en';
-	changeLanguage(lang, translate);
+	changeLanguage(translate);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	initializeTranslation().then((translations) => {
 		translate = translations;
 		navigateTo(currentPage);
-		
-
+	})
+	.catch((error) => {
+		console.error('Error:', error);
 	});
 });
 

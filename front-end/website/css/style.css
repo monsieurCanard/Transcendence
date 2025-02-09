@@ -56,24 +56,27 @@ form {
 
 .btn {
   width: 100%;
-  margin: 5px;
   color: #ffffff;
-}
-
-.btn-default {
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
-  color: #ffffff;
-  background-color: #000000;
-  border: 1px solid #ffffff;
-  cursor: pointer;
 }
 
 .btn-primary {
+  margin-top: 1rem;
   font-size: 1.5rem;
   padding: 1rem 2rem;
-  margin-top: 2rem;
+  background-color: #1C1890;
+  border: 1px solid #1C1890;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #231948;
+  border: 1px solid #231948;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #000000;
+  border: 1px solid #000000;
   cursor: pointer;
 }
 
@@ -86,9 +89,9 @@ form {
   cursor: pointer;
 }
 
-.btn-default:hover {
-  background-color: #ffffff;
-  color: #000000;
+.btn-primary:hover {
+  background-color: #cc6b67;
+  border: 1px solid #cc6b67;
 }
 
 /*
@@ -104,12 +107,12 @@ h1 {
 .display-1 {
   text-align: center;
 }
+
 p {
   font-size: 1rem;
   align-items: center;
   text-align: center;
   color: #ffffff;
-  margin: 1.5rem 0; /* Ajoutez une marge pour espacer les éléments */
 }
 
 a {
@@ -125,7 +128,6 @@ a {
 label {
   font-size: 2rem;
   color: #ffffff;
-  margin: 1rem 0;
 }
 
 input {
@@ -147,39 +149,24 @@ select {
   border: 1px solid #081400;
 }
 
-/* Ajoutez ce style pour aligner la case à cocher à droite du texte */
 .checkbox {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  
 }
 
 .checkbox label {
   flex-grow: 1;
+  margin-left: 10px;
 }
 
 .checkbox input[type="checkbox"] {
-  margin-left: 10px;
   width: 20px;
   height: 20px;
 }
 
 .row {
-  /* display: flex; */
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-}
-
-canvas {
-  width: 100%;
-  height: 100%;
-  background-color: #f0f0f0;
-  border: 1px solid #081400;
-  border-radius: 5%;
+  height: 100vh;
 }
 
 span {
@@ -189,4 +176,117 @@ span {
 img {
   /* border: 1px solid #081400; */
   border-radius: 5%;
+}
+
+.custom-btn-black {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-top-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+.custom-btn-white {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-top-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+
+/*
+* CHAT
+*/
+
+.chat-container {
+  position: relative;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-bottom-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-bottom-right-radius: 10px;
+  height: 450px;
+}
+
+.chat-content {
+  overflow: auto;
+  height: 400px;
+}
+
+/*
+* CHAT MESSAGES OTHER USERS
+*/
+.chat-message {
+  color: #ffffff;
+  margin: 1rem 0;
+  padding: 5px;
+  margin-right: 48%;
+  margin-left: 2%;
+  text-align: left;
+  border-radius: 10px;
+  width: 50% ;
+}
+
+.chat-text {
+  color: #ffffff;
+  padding: 5px;
+  text-align: left;
+  background-color: #1C1890;
+  border-radius: 10px;
+  width: 100% ;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/*
+* CHAT MESSAGE USER
+*/
+.chat-message-user {
+  color: #ffffff;
+  margin-bottom: 1rem 0;
+  padding: 5px;
+  margin-left: 48%;
+  margin-right: 2%;
+  text-align: right;
+  border-radius: 10px;
+  width: 50% ;
+}
+
+.chat-text-user {
+  color: #ffffff;
+  padding: 5px;
+  text-align: left;
+  background-color: #cc6b67;
+  border-radius: 10px;
+  width: 100% ;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+
+
+
+.gameboard {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: 100vh ;
+  border-bottom-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-bottom-right-radius: 10px; 
 }

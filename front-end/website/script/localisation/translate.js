@@ -1,4 +1,4 @@
-export function loadTranslations() {
+export async function loadTranslations() {
 	return fetch('translation.json')
 		.then((response) => response.json())
 		.catch((error) => {
@@ -6,7 +6,9 @@ export function loadTranslations() {
 		});
 }
 
-export function changeLanguage(language, translate) {
+export function changeLanguage(translate) {
+	const language = localStorage.getItem('lang') || sessionStorage.getItem('lang') || 'en';
+
 	if (!translate[language]) {
 		return;
 	}
@@ -17,7 +19,7 @@ export function changeLanguage(language, translate) {
 		if (lang[key]) {
 			if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
 				element.placeholder = lang[key];
-			} else if (element.tagName === 'A' || element.tagName === 'BUTTON') {
+			} else if (element.tagName === 'A' || element.tagName === 'BUTTON' || element.tagName === 'LABEL') {
 				element.textContent = lang[key];
 			} else {
 				element.childNodes.forEach((node) => {
@@ -30,18 +32,17 @@ export function changeLanguage(language, translate) {
 	});
 }
 
-export function initializeTranslation() {
-	return loadTranslations().then((translations) => {
-		const lang = localStorage.getItem('lang') || sessionStorage.getItem('lang') || 'en';
-		changeLanguage(lang, translations);
-		return translations;
-	});
+export async function initializeTranslation() {
+	const translations = await loadTranslations();
+	if (!translations) {
+		return Promise.reject('Failed to load translations');
+	}
+	return translations;
 }
 
 export function restoreSaveLanguage() {
 	const saveLang = localStorage.getItem('lang');
-	if (saveLang)
-	{
+	if (saveLang) {
 		const saveLangBox = document.getElementById('saveLanguage');
 		saveLangBox.checked = true;
 		document.getElementById('lang').value = saveLang || 'en';

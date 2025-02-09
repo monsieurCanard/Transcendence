@@ -1,5 +1,6 @@
 {
 	"en": {
+		"save choice": "Save choice",
 		"username": "Username",
 		"password": "Password",
 		"verif_password": "Repeat password",
@@ -11,6 +12,7 @@
 		"login42": "Login with 42"
 	},
 	"fr": {
+		"save choice": "Sauvegarder mon choix",
 		"username": "Nom d'utilisateur",
 		"password": "Mot de passe",
 		"verif_password": "Repete le mot de passe",
@@ -22,6 +24,7 @@
 		"login42": "Connexion avec 42"
 	},
 	"es": {
+		"save choice": "Guardar elección",
 		"username": "Nombre de usuario",
 		"password": "Contraseña",
 		"verif_password": "Repetir contraseña",
