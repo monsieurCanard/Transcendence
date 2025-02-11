@@ -1,10 +1,8 @@
 services:
 
-  nginx:
-    container_name: nginx-front-end
-    build: ./nginx
+  vite:
+    build: ./front-end
     ports:
-      - "443:443"
+      - "5173:5173"
     volumes:
-      - ./website:/usr/share/nginx/html
-    restart: unless-stopped
+      - ./front-end/files/:/app

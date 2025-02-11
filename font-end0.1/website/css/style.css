@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/*
+* ALL
+*/
+
+* {
+  font-family: "Nunito", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../img/background-no-border-crop.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 
+* CONTAINER
+*/
+
+.hidden {
+  display: none;
+}
+
+.container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+}
+
+
+/*
+* FORM
+*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+/*
+* BOUTONS
+*/
+
+.btn {
+  width: 100%;
+  color: #ffffff;
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #1C1890;
+  border: 1px solid #1C1890;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #231948;
+  border: 1px solid #231948;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #000000;
+  border: 1px solid #000000;
+  cursor: pointer;
+}
+
+.btn-link {
+  font-size: 4.5rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-top: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #cc6b67;
+  border: 1px solid #cc6b67;
+}
+
+/*
+* TEXTES
+*/
+
+h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 1.5rem 0; /* Ajoutez une marge pour espacer les éléments */
+}
+
+.display-1 {
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px;
+}
+
+/*
+* LABELS
+*/
+
+label {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+input {
+  width: 50%;
+  color: #0e0e0e;
+  background-color: #f0f0f0;
+  border: 1px solid #081400;
+}
+
+/*
+* SELECT
+*/
+
+select {
+  margin: 1rem 0;
+  width: 100%;
+  color: #0e0e0e;
+  background-color: #f0f0f0;
+  border: 1px solid #081400;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox label {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.row {
+  width: 100%;
+  height: 100vh;
+}
+
+span {
+  color:#ffffff;
+}
+
+img {
+  /* border: 1px solid #081400; */
+  border-radius: 5%;
+}
+
+.custom-btn-black {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-top-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+.custom-btn-white {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-top-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-top-right-radius: 10px;
+  cursor: pointer;
+}
+
+
+/*
+* CHAT
+*/
+
+.chat-container {
+  position: relative;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-bottom-left-radius: 10px; /* Rayon de bordure pour le coin inférieur gauche */
+  border-bottom-right-radius: 10px;
+  height: 450px;
+}
+
+.chat-content {
+  overflow: auto;
+  height: 400px;
+}
+
+/*
+* CHAT MESSAGES OTHER USERS
+*/
+.chat-message {
+  color: #ffffff;
+  margin: 1rem 0;
+  padding: 5px;
+  margin-right: 48%;
+  margin-left: 2%;
+  text-align: left;
+  border-radius: 10px;
+  width: 50% ;
+}
+
+.chat-text {
+  color: #ffffff;
+  padding: 5px;
+  text-align: left;
+  background-color: #1C1890;
+  border-radius: 10px;
+  width: 100% ;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/*
+* CHAT MESSAGE USER
+*/
+
+.chat-message-user {
+  color: #ffffff;
+  margin-bottom: 1rem 0;
+  padding: 5px;
+  margin-left: 48%;
+  margin-right: 2%;
+  text-align: right;
+  border-radius: 10px;
+  width: 50% ;
+}
+
+.chat-text-user {
+  color: #ffffff;
+  padding: 5px;
+  text-align: left;
+  background-color: #cc6b67;
+  border-radius: 10px;
+  width: 100% ;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.gameboard {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: 100vh;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
