@@ -1,6 +1,6 @@
 {
 	"en": {
-		"lang_choice": "Choose your language",
+		"lang_choice": "Choose your language: ",
 		"save_choice": "Save choice",
 		"username": "Username",
 		"password": "Password",
@@ -13,7 +13,7 @@
 		"login42": "Login with 42"
 	},
 	"fr": {
-		"lang_choice": "Choisissez votre langue",
+		"lang_choice": "Choisissez votre langue: ",
 		"save_choice": "Sauvegarder mon choix",
 		"username": "Nom d'utilisateur",
 		"password": "Mot de passe",
@@ -26,7 +26,7 @@
 		"login42": "Connexion avec 42"
 	},
 	"es": {
-		"lang_choice": "Elige tu idioma",
+		"lang_choice": "Elige tu idioma: ",
 		"save_choice": "Guardar elección",
 		"username": "Nombre de usuario",
 		"password": "Contraseña",

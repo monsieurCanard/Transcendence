@@ -1,14 +1,15 @@
 export async function loadTranslation() {
-	console.log('Loading translations')
 	const reponse = await fetch('/translation.json')
-
 	return reponse.json()
 	
 }
 
-
 export async function translatePage(lang: string = 'en') {
+	
 	const translations = await loadTranslation()
+	if (!translations[lang]) {
+		return
+	}
 
 	const elements = document.querySelectorAll('[translate]')
 
@@ -28,8 +29,7 @@ export function changeLanguage() {
 	const language = (document.getElementById('language') as HTMLSelectElement).value
 	sessionStorage.setItem('lang', language);
 	translatePage(language);
-	(document.getElementById('language') as HTMLSelectElement).value = language
-  }
+}
 
 export function saveLanguage() {
 	localStorage.setItem('lang', sessionStorage.getItem('lang') || 'en')

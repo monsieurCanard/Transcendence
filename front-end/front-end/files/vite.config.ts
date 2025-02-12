@@ -6,7 +6,8 @@ export default defineConfig({
     tailwindcss(),
   ],
   server: {
-    host: '0.0.0.0',  // Permet à Vite d'écouter sur toutes les interfaces réseau
-    port: 5173
+    host: '0.0.0.0',
+    port: 5173,
+    allowedHosts: ['transcenduck.fr'],
   }
 })

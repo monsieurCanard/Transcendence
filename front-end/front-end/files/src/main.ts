@@ -2,51 +2,43 @@ import './style.css'
 
 import { renderHomePage } from './pages/home'
 import { renderLoginPage } from './pages/login'
-import { translatePage, changeLanguage, saveLanguage } from './i18n/translate'
+import { translatePage } from './i18n/translate'
+import { addAllEventOnPage } from './events/handler'
 
 const main_container = document.querySelector<HTMLDivElement>('#app')!
 
-function addAllEventOnPage() {
-  const all_events = [
-    { id: 'language', event: 'change', callback: () => { changeLanguage() } },
-    { id: 'save_lang', event: 'click', callback: () => { saveLanguage() } },
-    { id: 'loadLogin', event: 'click', callback: () => { renderPage('login') } },
-  ]
-  
-  all_events.forEach(event => {
-    if (document.getElementById(event.id) !== null)
-      document.getElementById(event.id)!.addEventListener(event.event, event.callback)
-  })
+function setupPageAndHistory(page: string, updateHistory: boolean = true) {
+	translatePage(localStorage.getItem('lang') || sessionStorage.getItem('lang') || 'en')
+	localStorage.setItem('current_page', page)
+	console.log('Setting up page:', page)
+	if (updateHistory)
+		history.pushState({ page }, '', `/${page}`)
+	addAllEventOnPage();
 }
 
-function renderPage(page: string) {
+export function renderPage(page: string, updateHistory: boolean = true) {
 
-  switch(page) {
-      case 'home':
-        main_container.innerHTML = renderHomePage();
-        break;
-      case 'login':
-        main_container.innerHTML = renderLoginPage();
-        break;
-      default:
-        main_container.innerHTML = renderHomePage();
-        break;
-  }
-  translatePage(localStorage.getItem('lang') || sessionStorage.getItem('lang') || 'en')
-  localStorage.setItem('current_page', page)
-  addAllEventOnPage()
+	switch(page) {
+			case 'home':
+				main_container.innerHTML = renderHomePage();
+				(document.getElementById('language') as HTMLSelectElement).value = localStorage.getItem('lang') || sessionStorage.getItem('lang') || 'en'
+				break;
+			case 'login':
+				main_container.innerHTML = renderLoginPage();
+				break;
+			default:
+				main_container.innerHTML = renderHomePage();
+				break;
+	}
+	setupPageAndHistory(page, updateHistory);
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
-  const page = localStorage.getItem('current_page') || 'home'
-  renderPage(page)
+	const page = localStorage.getItem('current_page') || 'home'
+	renderPage(page, false)
 })
 
-
-
-window.addEventListener('popstate', () => { 
-  const page = localStorage.getItem('current_page')!
-  renderPage(page)
+window.addEventListener('popstate', (event) => { 
+	const page = event.state?.page || 'home'
+	renderPage(page, false)
 })

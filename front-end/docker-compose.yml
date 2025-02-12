@@ -1,8 +1,12 @@
 services:
-
   vite:
     build: ./front-end
-    ports:
-      - "5173:5173"
     volumes:
       - ./front-end/files/:/app
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "443:443"
+    depends_on:
+      - vite
