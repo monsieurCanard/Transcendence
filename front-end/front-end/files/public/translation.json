@@ -10,7 +10,7 @@
 		"create_account": "Create an account",
 		"back-link": "Back",
 		"login": "Login",
-		"login42": "Login with 42"
+		"google_login": "Login with Google"
 	},
 	"fr": {
 		"lang_choice": "Choisissez votre langue: ",
@@ -23,7 +23,7 @@
 		"create_account": "Créer un compte",
 		"back-link": "Retour",
 		"login": "Connexion",
-		"login42": "Connexion avec 42"
+		"google_login": "Connexion avec Google"
 	},
 	"es": {
 		"lang_choice": "Elige tu idioma: ",
@@ -36,6 +36,6 @@
 		"create_account": "Crear una cuenta",
 		"back-link": "Atrás",
 		"login": "Iniciar sesión",
-		"login42": "Iniciar sesión con 42"
+		"google_login": "Iniciar sesión con Google"
 	}
 }

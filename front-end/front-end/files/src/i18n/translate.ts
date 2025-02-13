@@ -4,14 +4,16 @@ export async function loadTranslation() {
 	
 }
 
-export async function translatePage(lang: string = 'en') {
+export async function translatePage(lang : string = 'en') {
+	
+	const container = document.querySelector<HTMLDivElement>('#app')!
 	
 	const translations = await loadTranslation()
 	if (!translations[lang]) {
 		return
 	}
 
-	const elements = document.querySelectorAll('[translate]')
+	const elements = container.querySelectorAll('[translate]')
 
 	elements.forEach(element => {
 		const key = element.getAttribute('translate')
@@ -32,5 +34,6 @@ export function changeLanguage() {
 }
 
 export function saveLanguage() {
+	console.log('saveLanguage')
 	localStorage.setItem('lang', sessionStorage.getItem('lang') || 'en')
 }

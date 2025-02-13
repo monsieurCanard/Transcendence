@@ -1,6 +1,4 @@
-FROM node:18-alpine
-
-# RUN apk add --no-cache openssl
+FROM node:22-alpine
 
 RUN mkdir -p /app
 
@@ -11,7 +9,5 @@ COPY ./files/package.json .
 RUN npm install
 
 COPY ./files/ ./files/
-
-EXPOSE 5173
 
 CMD ["npm", "run", "dev"]
